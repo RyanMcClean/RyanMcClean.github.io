@@ -26,10 +26,9 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  RyanMcClean
 
 # Build settings
-remote-theme: pages-themes/hacker@v2.0.0
+theme: jekyll-theme-hacker
 plugins:
   - jekyll-feed
-  - jeykll-remote-theme
 
 # Exclude from processing.
 # The following items will not be processed, by default.
