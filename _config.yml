@@ -21,14 +21,21 @@
 title: Ryan's Blog
 description: >- # this means to ignore newlines until "baseurl:"
   Basic blog to keep a track of my projects, and things I'm learning.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  RyanMcClean
-
+show-downloads: true
 # Build settings
 theme: jekyll-theme-hacker
 plugins:
   - jekyll-feed
+
+permalink: /:title
+collections:
+  blogs:
+    output: true
+    permalink: /:collection/:title
+# This is the permalink structure for your posts. You can change it to whatever
 
 # Exclude from processing.
 # The following items will not be processed, by default.

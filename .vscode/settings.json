@@ -1,0 +1,10 @@
+{
+    "cSpell.words": [
+        "cryptsetup",
+        "crypttab",
+        "keyctl",
+        "keyscript",
+        "luks",
+        "lvresize"
+    ]
+}
