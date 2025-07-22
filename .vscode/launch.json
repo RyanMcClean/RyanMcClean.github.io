@@ -1,0 +1,11 @@
+{
+    "profiles": {},
+    "configurations": [
+        {
+            "name": "Serve Jekyll",
+            "type": "node-terminal",
+            "request": "launch",
+            "command": "bundle exec jekyll serve --verbose",
+        }
+    ]
+}
