@@ -5,8 +5,15 @@
 layout: default
 ---
 
-# Blogs
+<ul>
+  {% for blog in site.blogs %}
+    <li>
+        {% if blog.excerpt %}
+            {{ blog.excerpt }}
+        {% endif %}
+        <a href="{{ blog.url }}">{{ blog.title }}</a>
+    </li>
+    <hr>
+  {% endfor %}
+</ul>
 
-## 2025-07-21
-
-[LUKS Encryption](/blogs/luks-encryption.html)

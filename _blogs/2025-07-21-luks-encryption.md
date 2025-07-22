@@ -9,6 +9,12 @@ tags: LUKS Encryption Debian
 
 # LUKS Drive Encryption
 
+## Summary
+
+I encrypted all the drives in my PC, which was easy, then I struggled with encrypting, auto-decrypting, and auto-mounting a usb drive.
+
+<!--more-->
+
 ## The start
 
 The journey into LUKS this time started for me cause I'd fucked my drive partitions.
@@ -34,17 +40,23 @@ Encryption was easy, same process as above. However, decryption was something el
 What I wanted was the drive to be decrypted and mount at boot if it's plugged in.
 But also, to be automatically decrypted and mounted if it it plugged in while the system was running.
 
+***
 <details>
 <summary>
-#### Quick backstory
+Quick backstory
+
+
 </summary>
 
 I have recently moved to linux from windows, I have used linux a lot, professionally and as a hobby (Rasberry Pi's and such). Linux requires a lot more tinkering than windows, which I prefer, I enjoy the process. Part of this process has involved me fiddling with `udev` rules.
 I wanted to get my nintendo switch pro controller to work with my debian install. I got it working in the end, but that leads us back to the main story.
 
-#### End backstory
+
+End backstory
+
 </details>
 
+***
 
 I was aware that `udev` rules can be used to perform actions when devices connect to the computer. So I was pretty sure that I could use it to handle hot-plugging the usb drive. This got quite intense, at one point I had `journalctl -xef` running on one screen, `udevadm monitor` on another, then `watch lsblk` (to see if the drive got mounted) and my text editor on the other. My brain started to hurt after a while.
 
