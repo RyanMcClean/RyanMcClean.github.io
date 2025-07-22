@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "First Post, LUKS Encryption"
-date:   2025-07-25 12:00:00 +0100
+title:  "luks_encryption"
+date:   2025-07-21 12:00:00 +0100
 categories: Blog LUKS
 tags: LUKS Encryption Debian 
 ---

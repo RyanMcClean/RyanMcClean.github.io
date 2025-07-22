@@ -26,17 +26,15 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  RyanMcClean
 show-downloads: true
 # Build settings
-remote-theme: pages-themes/hacker@v0.2.0
+theme: jekyll-theme-hacker
 plugins:
   - jekyll-feed
-  - jekyll-remote-theme
 
 permalink: /:title
 collections:
   blogs:
     output: true
     permalink: /:collection/:title
-# This is the permalink structure for your posts. You can change it to whatever
 
 # Exclude from processing.
 # The following items will not be processed, by default.
