@@ -9,4 +9,4 @@ layout: default
 
 ## 2025-07-21
 
-[LUKS Encryption](/blogs/luks_encryption.html)
+[LUKS Encryption](/blogs/luks-encryption.html)
