@@ -94,18 +94,18 @@ With all of this done my usb drive is now encrypted and when I plug it into my c
 `mount`
 
 ## References
-- 1: https://linux.die.net/man/8/cryptsetup
+- 1: <https://linux.die.net/man/8/cryptsetup>
 
 [1]: https://linux.die.net/man/8/cryptsetup
 
-- 2: https://linux.die.net/man/8/mkfs.ext4
+- 2: <https://linux.die.net/man/8/mkfs.ext4>
 
 [2]: https://linux.die.net/man/8/mkfs.ext4
 
-- 3: https://linux.die.net/man/5/fstab
+- 3: <https://linux.die.net/man/5/fstab>
 
 [3]: https://linux.die.net/man/5/fstab
 
-- 4: https://linux.die.net/man/5/crypttab
+- 4: <https://linux.die.net/man/5/crypttab>
 
 [4]: https://linux.die.net/man/5/crypttab
