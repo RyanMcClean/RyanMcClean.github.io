@@ -27,8 +27,8 @@ Then I could size my root partition up to 100GB, and finally just grow my /home 
 ## Encryption
 
 While doing all that I figured I'd give encrypting the other drives on my system a go. How hard could it be.
-Turns out not very hard. I copied my data off, ran `cryptsetup luksFormat /{path to drive}` and it worked pretty much straight out of the gate.
-I just opened the encrypted drive, make the ext4 file system inside it (`mkfs.ext4`), and then updated my `/etc/fstab` and `/etc/crypttab` files.
+Turns out not very hard. I copied my data off, ran [`cryptsetup luksFormat /{path to drive}`][1] and it worked pretty much straight out of the gate.
+I just opened the encrypted drive, make the ext4 file system inside it ([`mkfs.ext4`][2]), and then updated my [`/etc/fstab`][3] and [`/etc/crypttab`][4] files.
 
 I opted to use `decrypt_keyctl` to cache my LUKS password and have it open all my drives with one password (I obviously set all encrypted drives to have the same password).
 This was as simple as setting `keyscript` to be equal to `decrypt_keyctl` as one of the options in `/etc/crypttab`.
@@ -48,7 +48,7 @@ Quick backstory
 
 </summary>
 
-I have recently moved to linux from windows, I have used linux a lot, professionally and as a hobby (Rasberry Pi's and such). Linux requires a lot more tinkering than windows, which I prefer, I enjoy the process. Part of this process has involved me fiddling with `udev` rules.
+I have recently moved to linux from windows, I have used linux a lot, professionally and as a hobby (Rasberry Pi's and such). Linux requires a lot more tinkering than windows, which I prefer, I enjoy the process. Part of this process has involved me fiddling with [`udev`][1] rules.
 I wanted to get my nintendo switch pro controller to work with my debian install. I got it working in the end, but that leads us back to the main story.
 
 
@@ -58,7 +58,7 @@ End backstory
 
 ***
 
-I was aware that `udev` rules can be used to perform actions when devices connect to the computer. So I was pretty sure that I could use it to handle hot-plugging the usb drive. This got quite intense, at one point I had `journalctl -xef` running on one screen, `udevadm monitor` on another, then `watch lsblk` (to see if the drive got mounted) and my text editor on the other. My brain started to hurt after a while.
+I was aware that [`udev`][1] rules can be used to perform actions when devices connect to the computer. So I was pretty sure that I could use it to handle hot-plugging the usb drive. This got quite intense, at one point I had `journalctl -xef` running on one screen, `udevadm monitor` on another, then `watch lsblk` (to see if the drive got mounted) and my text editor on the other. My brain started to hurt after a while.
 
 What I finally ended up with was this rule:
 
@@ -80,7 +80,7 @@ Type=oneshot
 ExecStart=/usr/bin/mount -a
 ```
 
-This relies on the proper setup of my `/etc/fstab` file. 
+This relies on the proper setup of my `/etc/fstab` file.
 
 With all of this done my usb drive is now encrypted and when I plug it into my computer it is decrypted and mounted. Success. 
 
@@ -92,3 +92,20 @@ With all of this done my usb drive is now encrypted and when I plug it into my c
 `mkfs.ext4`
 `lsblk`
 `mount`
+
+## References
+- 1: https://linux.die.net/man/8/cryptsetup
+
+[1]: https://linux.die.net/man/8/cryptsetup
+
+- 2: https://linux.die.net/man/8/mkfs.ext4
+
+[2]: https://linux.die.net/man/8/mkfs.ext4
+
+- 3: https://linux.die.net/man/5/fstab
+
+[3]: https://linux.die.net/man/5/fstab
+
+- 4: https://linux.die.net/man/5/crypttab
+
+[4]: https://linux.die.net/man/5/crypttab
