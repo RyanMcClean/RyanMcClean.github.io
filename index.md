@@ -8,7 +8,7 @@ layout: default
 <ul>
   {% for blog in site.blogs %}
     <li>
-    {{ blog.date }}
+    {{ blog.date | date: "%-d %B %Y" }}
         {% if blog.excerpt %}
             {{ blog.excerpt }}
         {% endif %}
