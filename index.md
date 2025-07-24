@@ -12,7 +12,7 @@ layout: default
             {{ blog.excerpt }}
             {{ blog.date | date: "%-d %B %Y" }}  
         {% endif %}
-        </br>
+        <br/>
         <a href="{{ blog.url }}">{{ blog.title }}</a>
     </li>
     <hr>
