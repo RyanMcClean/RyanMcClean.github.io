@@ -11,6 +11,7 @@ layout: default
         {% if blog.excerpt %}
             {{ blog.excerpt }}
             {{ blog.date | date: "%-d %B %Y" }}  
+            </br>
         {% endif %}
         <a href="{{ blog.url }}">{{ blog.title }}</a>
     </li>
