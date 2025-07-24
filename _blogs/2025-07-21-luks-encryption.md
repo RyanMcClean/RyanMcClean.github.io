@@ -48,7 +48,7 @@ Quick backstory
 
 </summary>
 
-I have recently moved to linux from windows, I have used linux a lot, professionally and as a hobby (Rasberry Pi's and such). Linux requires a lot more tinkering than windows, which I prefer, I enjoy the process. Part of this process has involved me fiddling with [`udev`][7] rules.
+I have recently moved to linux from windows, I have used linux a lot, professionally and as a hobby (Rasberry Pi's and such). Linux requires a lot more tinkering than windows, which I prefer, I enjoy the process. Part of this process has involved me fiddling with `udev` rules.
 I wanted to get my nintendo switch pro controller to work with my debian install. I got it working in the end, but that leads us back to the main story.
 
 
