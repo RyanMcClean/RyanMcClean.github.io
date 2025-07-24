@@ -6,6 +6,7 @@ categories: Blog LUKS Encryption
 author: Ryan McClean
 tags: LUKS Encryption Debian udev mount cryptsetup 
 ---
+**Last Updated: {{ site.time }}
 
 # LUKS Drive Encryption
 
