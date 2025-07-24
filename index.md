@@ -8,9 +8,9 @@ layout: default
 <ul>
   {% for blog in site.blogs %}
     <li>
-    {{ blog.date | date: "%-d %B %Y" }}
         {% if blog.excerpt %}
             {{ blog.excerpt }}
+            {{ blog.date | date: "%-d %B %Y" }}
         {% endif %}
         <a href="{{ blog.url }}">{{ blog.title }}</a>
     </li>

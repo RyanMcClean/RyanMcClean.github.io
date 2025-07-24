@@ -6,7 +6,6 @@ categories: Blog LUKS Encryption
 author: Ryan McClean
 tags: LUKS Encryption Debian udev mount cryptsetup 
 ---
-**Last Updated: {{ site.time | date: "%-d %B %Y" }}**
 
 # LUKS Drive Encryption
 
@@ -84,6 +83,9 @@ ExecStart=/usr/bin/mount -a
 This relies on the proper setup of my [`/etc/fstab`][3] file.
 
 With all of this done my usb drive is now encrypted and when I plug it into my computer it is decrypted and mounted. Success. 
+
+**Last Updated: {{ site.time | date: "%-d %B %Y" }}**
+
 
 ## Key commands
 
