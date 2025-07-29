@@ -31,6 +31,7 @@ show_downloads: true
 theme: jekyll-theme-hacker
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
 
 permalink: /:title
 collections:

@@ -3,11 +3,11 @@ layout: post
 title:  "luks_encryption"
 date:   2025-07-21 12:00:00 +0100
 categories: Blog LUKS Encryption
-author: Ryan McClean
+author: ryan_mcc
 tags: LUKS Encryption Debian udev mount cryptsetup 
 ---
 
-# LUKS Drive Encryption
+# [LUKS Drive Encryption]({{page.url}})
 
 ## Summary
 

@@ -79,6 +79,7 @@ DEPENDENCIES
   http_parser.rb (~> 0.6.0)
   jekyll (~> 3.9.3)
   jekyll-feed (~> 0.12)
+  jekyll-seo-tag
   jekyll-theme-hacker (~> 0.2.0)
   kramdown-parser-gfm
   minima (~> 2.5)
