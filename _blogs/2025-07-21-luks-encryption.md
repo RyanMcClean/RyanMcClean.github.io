@@ -9,6 +9,15 @@ tags: LUKS Encryption Debian udev mount cryptsetup
 
 # [LUKS Drive Encryption]({{page.url}})
 
+## Contents
+
+1. [Summary](#summary)
+2. [The Start](#the-start)
+3. [Encryption](#encryption)
+4. [The Escalation](#the-escalation)
+5. [Key Commands](#key-commands)
+6. [References](#references)
+
 ## Summary
 
 I encrypted all the drives in my PC, which was easy, then I struggled with encrypting, auto-decrypting, and auto-mounting a usb drive.
@@ -48,7 +57,7 @@ Quick backstory
 
 </summary>
 
-I have recently moved to linux from windows, I have used linux a lot, professionally and as a hobby (Rasberry Pi's and such). Linux requires a lot more tinkering than windows, which I prefer, I enjoy the process. Part of this process has involved me fiddling with `udev` rules.
+I have recently moved to linux from windows, I have used linux a lot, professionally and as a hobby (Raspberry Pi's and such). Linux requires a lot more tinkering than windows, which I prefer, I enjoy the process. Part of this process has involved me fiddling with `udev` rules.
 I wanted to get my nintendo switch pro controller to work with my debian install. I got it working in the end, but that leads us back to the main story.
 
 
@@ -67,13 +76,13 @@ What I finally ended up with was this rule:
 ACTION=="add",KERNEL=="sd[a-z][1-9]",SUBSYSTEM=="block",ATTRS{model}=="SSD 970 EVO Plus",ATTRS{vendor}=="Samsung ",RUN+="/home/ryan_mcc/Documents/LocalCode/decrypt.sh $kernel"ENV{SYSTEMD_WANTS}="automount.service"
 ```
 
-I spent a lot of time trying to script the decryption and the mounting of the drive. I hadn't realised at the time that the udev service had the [`PrivateMounts=yes`][11] option in it. This prevented the mounting from ever being successful. It turned out that the workaround was to call up another service from the udev rule which wouldn't be limited by this service option and would therefore be able to mount the drive. This also had the unintentional effect of timing the mounting of the drive to be after the decryption. It also means that should I have other drives that I want to make hot-puggable then I can just call the same service.
+I spent a lot of time trying to script the decryption and the mounting of the drive. I hadn't realised at the time that the udev service had the [`PrivateMounts=yes`][11] option in it. This prevented the mounting from ever being successful. It turned out that the workaround was to call up another service from the udev rule which wouldn't be limited by this service option and would therefore be able to mount the drive. This also had the unintentional effect of timing the mounting of the drive to be after the decryption. It also means that should I have other drives that I want to make hot-pluggable then I can just call the same service.
 
 This is the service file that I created:
 
 ```text
 [Unit]
-Description=Auto decypt USB drive and mount
+Description=Auto decrypt USB drive and mount
 
 [Service] 
 Type=oneshot

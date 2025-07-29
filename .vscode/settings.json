@@ -1,10 +1,14 @@
 {
     "cSpell.words": [
+        "automount",
         "cryptsetup",
         "crypttab",
+        "journalctl",
         "keyctl",
         "keyscript",
         "luks",
-        "lvresize"
+        "lvresize",
+        "oneshot",
+        "udevadm"
     ]
 }
